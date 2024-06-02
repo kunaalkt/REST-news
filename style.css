@@ -1,23 +1,34 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(254, 254, 254, 0.511);
+    background-color: #233a77;
     margin: 0;
     padding: 0;
-}
-
-.container {
+  }
+  
+  .container {
     max-width: 800px;
     margin: 60px auto;
     padding: 30px;
-    background: white;
-    box-shadow:  0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-h1 {
+    background: transparent;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+  }
+  
+  h1 {
+    color: #58b8cb;
     text-align: center;
-}
-
-button{
+    cursor: default;
+  }
+  
+  h2 {
+    padding: 2px 5px 10px 5px;
+    font-size: 27px;
+    font-family: Georgia;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  #fetch-posts {
     display: block;
     width: 100%;
     padding: 11px;
@@ -25,17 +36,37 @@ button{
     cursor: pointer;
     border: none;
     border-radius: 25px;
-    background-color: rgb(87, 172, 188);
-}
-
-button:hover{
+    background-color: #57acbc;
+    transition: background-color 0.2s;
+  }
+  
+  #fetch-posts:enabled:hover {
     background-color: rgba(87, 171, 188, 0.552);
-}
-
-#post-container {
+  }
+  
+  #fetch-posts:disabled {
+    background-color: rgba(87, 171, 188, 0.552);
+    cursor: not-allowed;
+  }
+  
+  #post-container {
     margin-top: 30px;
-}
-
-.post{
-    border-bottom: 1px solid black;
-}
+  }
+  
+  .post {
+    background-color: #e4e4e4;
+    cursor: pointer;
+    transition: background-color 0.2s, border 0.2s;
+    border-radius: 3px;
+  }
+  
+  .post:hover {
+    background-color: white;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.2);
+  }
+  
+  .post p {
+    font-size: 20px;
+    margin-left: 7px;
+    padding: 10px;
+  }
